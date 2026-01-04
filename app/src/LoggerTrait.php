@@ -10,10 +10,6 @@ trait LoggerTrait
 
     protected function log(LogLevel $level, string $message): void
     {
-        $this->logger->log(
-            $level,
-            $message,
-            static::class
-        );
+        $this->logger->log($level, $message, static::class);
     }
 }

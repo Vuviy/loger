@@ -12,11 +12,7 @@ readonly class Logger implements LoggerInterface
 
     public function log(LogLevel $level, string $message, string $class): void
     {
-        $formatted = $this->formatter->format(
-            $level,
-            $message,
-            $class
-        );
+        $formatted = $this->formatter->format($level, $message, $class);
 
         foreach ($this->handlers as $handler) {
             if ($handler->supports($level)) {
